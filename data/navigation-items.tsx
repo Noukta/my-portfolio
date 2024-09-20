@@ -1,36 +1,30 @@
-import {
-  HomeIcon,
-  MobileIcon,
-  DesktopIcon,
-  EnvelopeClosedIcon,
-} from "@radix-ui/react-icons";
-import { PiCertificate } from "react-icons/pi";
+import { Home, Smartphone, Monitor, Award, Mail } from "lucide-react";
 
-const size = "h-[1rem] w-[1rem]";
+const iconSize = "h-5 w-5";
 const navigationItems = [
   {
     title: "About Me",
-    icon: <HomeIcon className={size} />,
+    icon: <Home className={iconSize} />,
     link: "#home",
   },
   {
     title: "Mobile",
-    icon: <MobileIcon className={size} />,
+    icon: <Smartphone className={iconSize} />,
     link: "#mobile",
   },
   {
     title: "Web",
-    icon: <DesktopIcon className={size} />,
+    icon: <Monitor className={iconSize} />,
     link: "#web",
   },
   {
     title: "Grades",
-    icon: <PiCertificate className={size} />,
+    icon: <Award className={iconSize} />,
     link: "#grades",
   },
   {
     title: "Contact",
-    icon: <EnvelopeClosedIcon className={size} />,
+    icon: <Mail className={iconSize} />,
     link: "#contact",
   },
 ];
