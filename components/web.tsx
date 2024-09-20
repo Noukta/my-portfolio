@@ -19,9 +19,9 @@ import {
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { mobileProjects } from "@/data/projects";
+import { webProjects } from "@/data/projects";
 
-export function Mobile() {
+export function Web() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -40,19 +40,17 @@ export function Mobile() {
 
   return (
     <section
-      id="mobile"
+      id="web"
       className="w-full min-h-screen flex flex-col justify-start px-4 py-16"
     >
-      <h1 className="text-2xl font-semibold mb-8 text-center">
-        Mobile Projects
-      </h1>
-      <div className="flex flex-col lg:flex-row justify-evenly items-center">
-        <Carousel setApi={setApi} className="w-full max-w-xs">
+      <h1 className="text-2xl font-semibold mb-8 text-center">Web Projects</h1>
+      <div className="flex flex-col justify-center items-center mx-12">
+        <Carousel setApi={setApi} className="w-full max-w-2xl">
           <CarouselContent>
-            {mobileProjects.map((project) => (
+            {webProjects.map((project) => (
               <CarouselItem key={project.title} className="p-8">
                 <Card className="rounded-2xl shadow-lg">
-                  <CardContent className="flex aspect-[9/16] items-center justify-center p-2">
+                  <CardContent className="flex aspect-video items-center justify-center p-2">
                     <video
                       src={project.videoUrl}
                       className="bg-secondary h-full w-full object-cover rounded-2xl"
@@ -71,9 +69,9 @@ export function Mobile() {
         </Carousel>
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>{mobileProjects[current].title}</CardTitle>
+            <CardTitle>{webProjects[current].title}</CardTitle>
             <CardDescription>
-              {mobileProjects[current].shortDescription}
+              {webProjects[current].shortDescription}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -84,15 +82,15 @@ export function Mobile() {
           </CardContent>
           <CardFooter className="flex justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              Released: {mobileProjects[current].date}
+              Released: {webProjects[current].date}
             </p>
             <Button
               variant="outline"
               size="sm"
-              aria-label={`View ${mobileProjects[current].title} on GitHub`}
+              aria-label={`View ${webProjects[current].title} on GitHub`}
               onClick={() =>
                 window.open(
-                  mobileProjects[current].githubUrl,
+                  webProjects[current].githubUrl,
                   "_blank",
                   "noopener,noreferrer"
                 )

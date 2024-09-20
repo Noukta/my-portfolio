@@ -65,7 +65,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="container min-h-screen flex flex-col justify-center mx-auto px-4 pt-24"
+      className="w-full min-h-screen flex flex-col justify-center px-4 pt-24"
     >
       <div className="flex justify-center items-center space-x-6 py-12">
         <Avatar className="h-32 w-32">
