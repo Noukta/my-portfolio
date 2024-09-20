@@ -16,7 +16,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Github } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { webProjects } from "@/data/projects";
@@ -44,7 +44,7 @@ export function Web() {
       className="w-full min-h-screen flex flex-col justify-start px-4 py-16"
     >
       <h1 className="text-2xl font-semibold mb-8 text-center">Web Projects</h1>
-      <div className="flex flex-col justify-center items-center mx-12">
+      <div className="flex flex-col justify-center items-center mx-16">
         <Carousel setApi={setApi} className="w-full max-w-2xl">
           <CarouselContent>
             {webProjects.map((project) => (
@@ -96,7 +96,7 @@ export function Web() {
                 )
               }
             >
-              <GitHubLogoIcon className="mr-2 h-4 w-4" />
+              <Github className="mr-2 h-4 w-4" />
               View on GitHub
             </Button>
           </CardFooter>

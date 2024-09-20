@@ -16,7 +16,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Github } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { mobileProjects } from "@/data/projects";
@@ -46,7 +46,7 @@ export function Mobile() {
       <h1 className="text-2xl font-semibold mb-8 text-center">
         Mobile Projects
       </h1>
-      <div className="flex flex-col lg:flex-row justify-evenly items-center">
+      <div className="flex flex-col lg:flex-row justify-evenly items-center mx-16">
         <Carousel setApi={setApi} className="w-full max-w-xs">
           <CarouselContent>
             {mobileProjects.map((project) => (
@@ -98,7 +98,7 @@ export function Mobile() {
                 )
               }
             >
-              <GitHubLogoIcon className="mr-2 h-4 w-4" />
+              <Github className="mr-2 h-4 w-4" />
               View on GitHub
             </Button>
           </CardFooter>
