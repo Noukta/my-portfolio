@@ -1,3 +1,4 @@
+import { Grades } from "@/components/grades";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Mobile } from "@/components/mobile";
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Mobile />
         <Web />
+        <Grades />
       </main>
     </div>
   );
