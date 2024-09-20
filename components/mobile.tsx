@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Card,
@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -15,28 +15,29 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@/components/ui/carousel";
-import { Github } from "lucide-react";
-import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { mobileProjects } from "@/data/projects";
+} from "@/components/ui/carousel"
+import { Github } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Button } from "./ui/button"
+import { mobileProjects } from "@/data/projects"
+import { Skeleton } from "./ui/skeleton"
 
 export function Mobile() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
 
   useEffect(() => {
     if (!api) {
-      return;
+      return
     }
-    setCurrent(api.selectedScrollSnap());
-    console.log("effect ", current);
+    setCurrent(api.selectedScrollSnap())
+    console.log("effect ", current)
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-      console.log("listener ", current);
-    });
-  }, [api]);
+      setCurrent(api.selectedScrollSnap())
+      console.log("listener ", current)
+    })
+  }, [api])
 
   return (
     <section
@@ -53,6 +54,7 @@ export function Mobile() {
               <CarouselItem key={project.title} className="p-8">
                 <Card className="rounded-2xl shadow-lg">
                   <CardContent className="flex aspect-[9/16] items-center justify-center p-2">
+                    {/* <Skeleton className="h-full w-full object-cover rounded-2xl" /> */}
                     <video
                       src={project.videoUrl}
                       className="bg-secondary h-full w-full object-cover rounded-2xl"
@@ -105,5 +107,5 @@ export function Mobile() {
         </Card>
       </div>
     </section>
-  );
+  )
 }

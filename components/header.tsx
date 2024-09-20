@@ -15,28 +15,28 @@ import { ThemeToggle } from "./theme-toggle";
 export function Header() {
   const headerRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    let prevScrollPos = window.scrollY;
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const headerElement = headerRef.current;
-      if (!headerElement) {
-        return;
-      }
-      headerElement.style.transitionDuration = "500ms";
-      if (prevScrollPos > currentScrollPos) {
-        headerElement.style.transform = "translateY(0)";
-      } else {
-        headerElement.style.transform = "translateY(-200px)";
-      }
-      prevScrollPos = currentScrollPos;
-    };
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   let prevScrollPos = window.scrollY;
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.scrollY;
+  //     const headerElement = headerRef.current;
+  //     if (!headerElement) {
+  //       return;
+  //     }
+  //     headerElement.style.transitionDuration = "500ms";
+  //     if (prevScrollPos > currentScrollPos) {
+  //       headerElement.style.transform = "translateY(0)";
+  //     } else {
+  //       headerElement.style.transform = "translateY(-200px)";
+  //     }
+  //     prevScrollPos = currentScrollPos;
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-10" ref={headerRef}>

@@ -4,7 +4,7 @@ const mobileProjects = [
       shortDescription: "Wallpaper App",
       longDescription: "",
       date: "September 2023",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/39874/39874-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
     {
@@ -12,7 +12,7 @@ const mobileProjects = [
       shortDescription: "Delivery App",
       longDescription: "",
       date: "July 2024",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/1222/1222-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
     {
@@ -20,7 +20,7 @@ const mobileProjects = [
       shortDescription: "2D Game",
       longDescription: "",
       date: "September 2023",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/39874/39874-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
     {
@@ -28,7 +28,7 @@ const mobileProjects = [
       shortDescription: "Whatsapp API",
       longDescription: "",
       date: "July 2024",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/1222/1222-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
   ];
@@ -39,7 +39,7 @@ const mobileProjects = [
       shortDescription: "Wallpaper App",
       longDescription: "",
       date: "September 2023",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/4067/4067-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
     {
@@ -47,7 +47,7 @@ const mobileProjects = [
       shortDescription: "Delivery App",
       longDescription: "",
       date: "July 2024",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/308/308-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
     {
@@ -55,7 +55,7 @@ const mobileProjects = [
       shortDescription: "2D Game",
       longDescription: "",
       date: "September 2023",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/4067/4067-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
     {
@@ -63,7 +63,7 @@ const mobileProjects = [
       shortDescription: "Whatsapp API",
       longDescription: "",
       date: "July 2024",
-      videoUrl: "",
+      videoUrl: "https://assets.mixkit.co/videos/308/308-720.mp4",
       githubUrl: "https://www.github.com/noukta",
     },
   ];

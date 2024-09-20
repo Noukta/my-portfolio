@@ -12,7 +12,7 @@ import {
   SiAppwrite,
 } from "react-icons/si";
 
-const iconSize = "h-16 w-16";
+const iconSize = "h-12 w-12";
 
 const tools = [
   {
