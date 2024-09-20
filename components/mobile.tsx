@@ -16,44 +16,10 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { GithubIcon } from "lucide-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-
-const mobileProjects = [
-  {
-    title: "wallios",
-    shortDescription: "Wallpaper App",
-    longDescription: "",
-    date: "September 2023",
-    videoUrl: "",
-    githubUrl: "https://www.github.com/noukta",
-  },
-  {
-    title: "Wingy",
-    shortDescription: "Delivery App",
-    longDescription: "",
-    date: "July 2024",
-    videoUrl: "",
-    githubUrl: "https://www.github.com/noukta",
-  },
-  {
-    title: " Monster Makeover",
-    shortDescription: "2D Game",
-    longDescription: "",
-    date: "September 2023",
-    videoUrl: "",
-    githubUrl: "https://www.github.com/noukta",
-  },
-  {
-    title: "WhaSticker",
-    shortDescription: "Whatsapp API",
-    longDescription: "",
-    date: "July 2024",
-    videoUrl: "",
-    githubUrl: "https://www.github.com/noukta",
-  },
-];
+import { mobileProjects } from "@/data/projects";
 
 export function Mobile() {
   const [api, setApi] = useState<CarouselApi>();
@@ -132,7 +98,7 @@ export function Mobile() {
                 )
               }
             >
-              <GithubIcon className="mr-2 h-4 w-4" />
+              <GitHubLogoIcon className="mr-2 h-4 w-4" />
               View on GitHub
             </Button>
           </CardFooter>
