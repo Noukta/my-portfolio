@@ -10,54 +10,55 @@ import {
   SiJetpackcompose,
   SiFirebase,
   SiAppwrite,
-} from "react-icons/si";
+} from "react-icons/si"
 
-const iconSize = "h-12 w-12";
+const style = ""
+const size = "2rem"
 
 const tools = [
   {
     title: "React (Native)",
-    icon: <SiReact className={iconSize} />,
+    icon: <SiReact className={style} size={size} />,
   },
   {
     title: "Expo",
-    icon: <SiExpo className={iconSize} />,
+    icon: <SiExpo className={style} size={size} />,
   },
   {
     title: "TypeScript",
-    icon: <SiTypescript className={iconSize} />,
+    icon: <SiTypescript className={style} size={size} />,
   },
   {
     title: "HTML5",
-    icon: <SiHtml5 className={iconSize} />,
+    icon: <SiHtml5 className={style} size={size} />,
   },
   {
     title: "CSS3",
-    icon: <SiCss3 className={iconSize} />,
+    icon: <SiCss3 className={style} size={size} />,
   },
   {
     title: "JavaScript",
-    icon: <SiJavascript className={iconSize} />,
+    icon: <SiJavascript className={style} size={size} />,
   },
   {
     title: "Next.js",
-    icon: <SiNextdotjs className={iconSize} />,
+    icon: <SiNextdotjs className={style} size={size} />,
   },
   {
     title: "Android",
-    icon: <SiAndroid className={iconSize} />,
+    icon: <SiAndroid className={style} size={size} />,
   },
   {
     title: "Jetpack Compose",
-    icon: <SiJetpackcompose className={iconSize} />,
+    icon: <SiJetpackcompose className={style} size={size} />,
   },
   {
     title: "Firebase",
-    icon: <SiFirebase className={iconSize} />,
+    icon: <SiFirebase className={style} size={size} />,
   },
   {
     title: "Appwrite",
-    icon: <SiAppwrite className={iconSize} />,
+    icon: <SiAppwrite className={style} size={size} />,
   },
-];
-export default tools;
+]
+export default tools

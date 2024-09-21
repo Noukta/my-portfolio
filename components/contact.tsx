@@ -70,27 +70,17 @@ export function Contact() {
   }
 
   return (
-    <section
-      id="contact"
-      className="w-full min-h-screen flex flex-col justify-center px-4 py-16"
-    >
-      <h1 className="text-2xl font-semibold mb-8 text-center">Contact Me</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-1/3 mx-auto">
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Card>
           <CardHeader>
-            <CardTitle>Reach me</CardTitle>
+            <CardTitle>Get In Touch</CardTitle>
             <CardDescription>
               I will be glad to answer your questions
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-muted-foreground"
-              >
-                Name
-              </label>
+          <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-4">
               <Input
                 id="name"
                 placeholder="Your Name"
@@ -102,19 +92,11 @@ export function Contact() {
                   {errors.name.message}
                 </p>
               )}
-            </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-muted-foreground mt-4"
-              >
-                Email
-              </label>
               <Input
                 id="email"
                 type="email"
-                placeholder="your@mail.com"
+                placeholder="Your Email"
                 {...register("email")}
                 className={errors.email ? "border-destructive" : ""}
               />
@@ -123,18 +105,10 @@ export function Contact() {
                   {errors.email.message}
                 </p>
               )}
-            </div>
 
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-muted-foreground mt-4"
-              >
-                Subject
-              </label>
               <Input
                 id="subject"
-                placeholder="Frontend Dev"
+                placeholder="Subject"
                 {...register("subject")}
                 className={errors.name ? "border-destructive" : ""}
               />
@@ -144,29 +118,27 @@ export function Contact() {
                 </p>
               )}
             </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-muted-foreground mt-4"
-              >
-                Message
-              </label>
-              <Textarea
-                id="message"
-                placeholder="More details about the job."
-                {...register("message")}
-                className={`h-32 ${errors.message ? "border-destructive" : ""}`}
-              />
-              {errors.message && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.message.message}
-                </p>
-              )}
-            </div>
+            <Textarea
+              id="message"
+              placeholder="Message"
+              {...register("message")}
+              className={`h-full min-h-32 ${
+                errors.message ? "border-destructive" : ""
+              }`}
+            />
+            {errors.message && (
+              <p className="mt-1 text-sm text-destructive">
+                {errors.message.message}
+              </p>
+            )}
           </CardContent>
           <CardFooter>
-            <Button type="submit" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              size={"lg"}
+              className="w-full"
+            >
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </CardFooter>
@@ -174,6 +146,6 @@ export function Contact() {
       </form>
 
       <Toaster />
-    </section>
+    </>
   )
 }

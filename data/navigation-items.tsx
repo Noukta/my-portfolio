@@ -1,32 +1,33 @@
-import { Home, Smartphone, Monitor, Award, Mail } from "lucide-react";
+import { Home, Smartphone, Monitor, Award, Mail } from "lucide-react"
 
-const iconSize = "h-5 w-5";
+const style =
+  "h-5 w-5 text-muted-foreground hover:text-foreground transition-colors"
 const navigationItems = [
   {
     title: "About Me",
-    icon: <Home className={iconSize} />,
+    icon: <Home className={style} />,
     link: "#home",
   },
   {
-    title: "Mobile",
-    icon: <Smartphone className={iconSize} />,
+    title: "Mobile Projects",
+    icon: <Smartphone className={style} />,
     link: "#mobile",
   },
   {
-    title: "Web",
-    icon: <Monitor className={iconSize} />,
+    title: "Web Projects",
+    icon: <Monitor className={style} />,
     link: "#web",
   },
   {
-    title: "Grades",
-    icon: <Award className={iconSize} />,
+    title: "Grades & Achievements",
+    icon: <Award className={style} />,
     link: "#grades",
   },
   {
-    title: "Contact",
-    icon: <Mail className={iconSize} />,
+    title: "Contact Me",
+    icon: <Mail className={style} />,
     link: "#contact",
   },
-];
+]
 
-export default navigationItems;
+export default navigationItems

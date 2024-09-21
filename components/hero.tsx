@@ -18,16 +18,16 @@ export function Hero() {
         <div>
           <h1 className="text-3xl font-bold mb-2">Ahmed Noukta</h1>
           <p>
-            A passionate developer with expertise in mobile and web
+            A passionate developer from Morocco with expertise in mobile and web
             technologies. Always eager to learn and create innovative solutions.
           </p>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center py-8">
-        <h2 className="text-2xl font-semibold mb-2">My toolbox</h2>
-        <ul className="w-full flex flex-wrap justify-center items-center gap-5 pb-5">
+        <h2 className="text-2xl font-semibold mb-2">My Toolbox</h2>
+        <ul className="flex flex-wrap justify-center items-center">
           {tools.map((item) => (
-            <li key={item.title} className="h-fit w-fit">
+            <li key={item.title} className="p-4">
               {item.icon}
               <span className="sr-only">{item.title}</span>
             </li>

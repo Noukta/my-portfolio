@@ -1,17 +1,18 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react"
 
-const size = "h-5 w-5";
+const style =
+  "h-5 w-5 text-muted-foreground hover:text-foreground transition-colors"
 const externalLinks = [
   {
     title: "Github",
-    icon: <Github className={size} />,
+    icon: <Github className={style} />,
     link: "https://github.com",
   },
   {
     title: "LinkedIn",
-    icon: <Linkedin className={size} />,
+    icon: <Linkedin className={style} />,
     link: "https://linkedin.com",
   },
-];
+]
 
-export default externalLinks;
+export default externalLinks
