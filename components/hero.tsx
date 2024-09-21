@@ -1,7 +1,8 @@
-"use client";
+"use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import tools from "@/data/tools";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import tools from "@/data/tools"
+import { Skeleton } from "./ui/skeleton"
 
 export function Hero() {
   return (
@@ -34,5 +35,5 @@ export function Hero() {
         </ul>
       </div>
     </section>
-  );
+  )
 }
