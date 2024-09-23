@@ -45,12 +45,12 @@ export function Web() {
       className="w-full min-h-screen flex flex-col justify-start px-4 py-16"
     >
       <h1 className="text-2xl font-semibold mb-8 text-center">Web Projects</h1>
-      <div className="flex flex-col justify-center items-center mx-16">
+      <div className="flex flex-col justify-center items-center">
         <Carousel setApi={setApi} className="w-full max-w-2xl">
           <CarouselContent>
             {webProjects.map((project) => (
-              <CarouselItem key={project.title} className="p-8">
-                <Card className="rounded-2xl shadow-lg">
+              <CarouselItem key={project.title}>
+                <Card className="rounded-2xl shadow-md mx-4 my-8">
                   <CardContent className="flex aspect-video items-center justify-center p-2">
                     {/* <Skeleton className="h-full w-full object-cover rounded-2xl" /> */}
                     <video
@@ -66,10 +66,10 @@ export function Web() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {/* <CarouselPrevious />
+          <CarouselNext /> */}
         </Carousel>
-        <Card className="w-full max-w-md">
+        <Card className="w-full max-w-xl">
           <CardHeader>
             <CardTitle>{webProjects[current].title}</CardTitle>
             <CardDescription>
@@ -78,8 +78,7 @@ export function Web() {
           </CardHeader>
           <CardContent>
             <p className="text-sm text-justify text-muted-foreground">
-              Project Awesome is a cutting-edge web application that
-              revolutionizes the way users interact with online content.
+              {webProjects[current].longDescription}
             </p>
           </CardContent>
           <CardFooter className="flex justify-between items-center">
@@ -87,6 +86,7 @@ export function Web() {
               Released: {webProjects[current].date}
             </p>
             <Button
+              disabled={webProjects[current].githubUrl == ""}
               variant="outline"
               size="sm"
               aria-label={`View ${webProjects[current].title} on GitHub`}

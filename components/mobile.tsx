@@ -51,8 +51,8 @@ export function Mobile() {
         <Carousel setApi={setApi} className="w-full max-w-xs">
           <CarouselContent>
             {mobileProjects.map((project) => (
-              <CarouselItem key={project.title} className="p-8">
-                <Card className="rounded-2xl shadow-lg">
+              <CarouselItem key={project.title} className="p-4">
+                <Card className="rounded-2xl shadow-md">
                   <CardContent className="flex aspect-[9/16] items-center justify-center p-2">
                     {/* <Skeleton className="h-full w-full object-cover rounded-2xl" /> */}
                     <video
@@ -80,8 +80,7 @@ export function Mobile() {
           </CardHeader>
           <CardContent>
             <p className="text-sm text-justify text-muted-foreground">
-              Project Awesome is a cutting-edge web application that
-              revolutionizes the way users interact with online content.
+              {mobileProjects[current].longDescription}
             </p>
           </CardContent>
           <CardFooter className="flex justify-between items-center">
@@ -89,6 +88,7 @@ export function Mobile() {
               Released: {mobileProjects[current].date}
             </p>
             <Button
+              disabled={mobileProjects[current].githubUrl == ""}
               variant="outline"
               size="sm"
               aria-label={`View ${mobileProjects[current].title} on GitHub`}
