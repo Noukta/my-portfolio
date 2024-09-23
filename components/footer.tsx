@@ -24,7 +24,10 @@ export function Footer() {
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             {navigationItems.map((item) => (
-              <li key={item.title}>
+              <li
+                key={item.title}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <Link href={item.link}>{item.title}</Link>
               </li>
             ))}
@@ -43,7 +46,6 @@ export function Footer() {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {item.icon}
                       <span className="sr-only">{item.title}</span>
@@ -65,7 +67,16 @@ export function Footer() {
           © {new Date().getFullYear()} Ahmed Noukta. All rights reserved.
         </p>
         <p className="text-sm text-center text-muted-foreground">
-          Made with &#x1F9E1; & &#x1F9E0;.
+          Made with &#x1F9E1; using React &{" "}
+          <Link
+            href="https://ui.shadcn.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            @shadcn
+          </Link>
+          .
         </p>
       </div>
     </footer>

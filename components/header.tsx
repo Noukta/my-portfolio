@@ -63,7 +63,7 @@ export function Header() {
           </ul>
         </nav>
         <div className="absolute flex px-2 py-4 md:px-4 md:py-2 bg-secondary/25 backdrop-blur border border-input rounded-full">
-          <ul className="flex flex-col justify-center items-center md:flex-row md:space-x-6">
+          <ul className="flex flex-col justify-center items-center md:flex-row space-y-6 md:space-y-0 md:space-x-6">
             {externalLinks.map((item) => (
               <li key={item.title} className="text-center">
                 <Tooltip>
