@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import grades from "@/data/grades";
-import { ExternalLink } from "lucide-react";
-import Link from "next/link";
-import { Button } from "./ui/button";
+import grades from "@/data/grades"
+import { ExternalLink } from "lucide-react"
+import Link from "next/link"
+import { Button } from "./ui/button"
 
 export function Grades() {
   return (
     <section
       id="grades"
-      className="w-full min-h-screen flex flex-col justify-center px-4 py-16"
+      className="w-full min-h-screen flex flex-col px-4 py-16"
     >
       <h1 className="text-2xl font-semibold mb-8 text-center">
         Grades & Achievements
       </h1>
-      <div className="flex justify-center items-center px-4">
+      <div className="flex justify-center items-center px-4 my-auto">
         <ol className="relative border-l border-secondary">
           {grades.map((grade, index) => (
             <li key={index} className="mb-10 ml-6">
@@ -49,5 +49,5 @@ export function Grades() {
         </ol>
       </div>
     </section>
-  );
+  )
 }

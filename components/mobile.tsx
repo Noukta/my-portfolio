@@ -40,20 +40,23 @@ export function Mobile() {
   }, [api])
 
   return (
-    <section
-      id="mobile"
-      className="w-full min-h-screen flex flex-col justify-start px-4 py-16"
-    >
+    <section id="mobile" className="w-full min-h-screen flex flex-col py-16">
       <h1 className="text-2xl font-semibold mb-8 text-center">
         Mobile Projects
       </h1>
-      <div className="flex flex-col lg:flex-row justify-evenly items-center mx-16">
-        <Carousel setApi={setApi} className="w-full max-w-xs">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-x-16 gap-y-8 my-auto">
+        <Carousel
+          opts={{
+            loop: true,
+          }}
+          setApi={setApi}
+          className="w-full max-w-lg"
+        >
           <CarouselContent>
             {mobileProjects.map((project) => (
-              <CarouselItem key={project.title} className="p-4">
-                <Card className="rounded-2xl shadow-md">
-                  <CardContent className="flex aspect-[9/16] items-center justify-center p-2">
+              <CarouselItem key={project.title} className="basis-2/3">
+                <Card className="rounded-2xl">
+                  <CardContent className="flex aspect-[9/19] items-center justify-center p-2">
                     {/* <Skeleton className="h-full w-full object-cover rounded-2xl" /> */}
                     <video
                       src={project.videoUrl}
@@ -68,10 +71,8 @@ export function Mobile() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
-        <Card className="w-full max-w-md">
+        <Card className="w-10/12 max-w-md">
           <CardHeader>
             <CardTitle>{mobileProjects[current].title}</CardTitle>
             <CardDescription>

@@ -5,7 +5,6 @@ import { Contact } from "./contact"
 import navigationItems from "@/data/navigation-items"
 import externalLinks from "@/data/external-links"
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
-import { Heart } from "lucide-react"
 
 export function Footer() {
   return (
@@ -13,7 +12,7 @@ export function Footer() {
       id="contact"
       className="w-full min-h-screen flex flex-col justify-center px-4 sm:px-16 py-16 bg-secondary"
     >
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 my-auto">
         {/* contact Section */}
         <section className="col-span-2">
           <Contact />
@@ -62,7 +61,7 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="mt-8 pt-8 border-t border-muted-foreground/25">
+      <div className="mt-16 pt-16 border-t border-muted-foreground/25">
         <p className="text-sm text-center">
           © {new Date().getFullYear()} Ahmed Noukta. All rights reserved.
         </p>
