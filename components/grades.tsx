@@ -2,7 +2,6 @@
 
 import grades from "@/data/grades"
 import { ExternalLink } from "lucide-react"
-import Link from "next/link"
 import { Button } from "./ui/button"
 
 export function Grades() {

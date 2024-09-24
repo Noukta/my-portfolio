@@ -49,14 +49,14 @@ export function Contact() {
     setIsSubmitting(true)
     // EmailJs API call
     send(SERVICE_ID, TEMPLATE_ID, data, { publicKey: PUBLIC_KEY })
-      .then((response) => {
+      .then(() => {
         toast({
           title: "Message sent!",
           description:
             "Thank you for your message. We'll get back to you soon.",
         })
       })
-      .catch((err) => {
+      .catch(() => {
         toast({
           title: "Failed to send the message!",
           description: "Check the footer for alternative contacts",

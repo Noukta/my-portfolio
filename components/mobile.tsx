@@ -12,15 +12,12 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"
 import { Github } from "lucide-react"
 import { useEffect, useState } from "react"
 import { Button } from "./ui/button"
 import { mobileProjects } from "@/data/projects"
-import { Skeleton } from "./ui/skeleton"
 
 export function Mobile() {
   const [api, setApi] = useState<CarouselApi>()
